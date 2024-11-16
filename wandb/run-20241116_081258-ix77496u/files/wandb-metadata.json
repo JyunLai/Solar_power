@@ -1,0 +1,18 @@
+{
+    "os": "Linux-4.15.0-213-generic-x86_64-with-Ubuntu-18.04-bionic",
+    "python": "3.6.9",
+    "heartbeatAt": "2024-11-16T08:13:06.253862",
+    "startedAt": "2024-11-16T08:12:58.793971",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 2,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "Transformer.py",
+    "codePath": "Transformer.py",
+    "host": "nlp108",
+    "username": "b11015059",
+    "executable": "/usr/bin/python3"
+}

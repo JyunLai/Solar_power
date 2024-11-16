@@ -1,0 +1,172 @@
+2024-11-16 08:12:59,694 INFO    MainThread:19771 [internal.py:wandb_internal():92] W&B internal server running at pid: 19771, started at: 2024-11-16 08:12:59.694384
+2024-11-16 08:12:59,696 INFO    WriterThread:19771 [datastore.py:open_for_write():77] open: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/run-ix77496u.wandb
+2024-11-16 08:12:59,696 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: check_version
+2024-11-16 08:12:59,698 DEBUG   SenderThread:19771 [sender.py:send():235] send: header
+2024-11-16 08:12:59,698 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: check_version
+2024-11-16 08:13:00,486 DEBUG   SenderThread:19771 [sender.py:send():235] send: run
+2024-11-16 08:13:00,846 INFO    SenderThread:19771 [dir_watcher.py:__init__():169] watching files in: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files
+2024-11-16 08:13:00,846 INFO    SenderThread:19771 [sender.py:_start_run_threads():812] run started: ix77496u with start time 1731744778
+2024-11-16 08:13:00,848 DEBUG   SenderThread:19771 [sender.py:send():235] send: summary
+2024-11-16 08:13:00,849 INFO    SenderThread:19771 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2024-11-16 08:13:00,849 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: run_start
+2024-11-16 08:13:03,537 INFO    Thread-8  :19771 [dir_watcher.py:_on_file_created():217] file/dir created: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/wandb-summary.json
+2024-11-16 08:13:06,253 DEBUG   HandlerThread:19771 [meta.py:__init__():36] meta init
+2024-11-16 08:13:06,253 DEBUG   HandlerThread:19771 [meta.py:__init__():50] meta init done
+2024-11-16 08:13:06,253 DEBUG   HandlerThread:19771 [meta.py:probe():210] probe
+2024-11-16 08:13:06,260 DEBUG   HandlerThread:19771 [git.py:repo():33] git repository is invalid
+2024-11-16 08:13:06,260 DEBUG   HandlerThread:19771 [meta.py:_save_pip():54] save pip
+2024-11-16 08:13:06,260 DEBUG   HandlerThread:19771 [meta.py:_save_pip():68] save pip done
+2024-11-16 08:13:06,260 DEBUG   HandlerThread:19771 [meta.py:probe():248] probe done
+2024-11-16 08:13:06,262 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: stop_status
+2024-11-16 08:13:06,262 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: stop_status
+2024-11-16 08:13:06,511 DEBUG   SenderThread:19771 [sender.py:send():235] send: files
+2024-11-16 08:13:06,511 INFO    SenderThread:19771 [sender.py:_save_file():944] saving file wandb-metadata.json with policy now
+2024-11-16 08:13:06,538 INFO    Thread-8  :19771 [dir_watcher.py:_on_file_created():217] file/dir created: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/requirements.txt
+2024-11-16 08:13:06,538 INFO    Thread-8  :19771 [dir_watcher.py:_on_file_created():217] file/dir created: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/output.log
+2024-11-16 08:13:06,539 INFO    Thread-8  :19771 [dir_watcher.py:_on_file_created():217] file/dir created: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/wandb-metadata.json
+2024-11-16 08:13:07,186 INFO    Thread-11 :19771 [upload_job.py:push():137] Uploaded file /tmp/tmphsxf_08kwandb/j3glytv4-wandb-metadata.json
+2024-11-16 08:13:08,538 INFO    Thread-8  :19771 [dir_watcher.py:_on_file_modified():230] file/dir modified: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/output.log
+2024-11-16 08:13:10,539 INFO    Thread-8  :19771 [dir_watcher.py:_on_file_modified():230] file/dir modified: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/output.log
+2024-11-16 08:13:12,539 INFO    Thread-8  :19771 [dir_watcher.py:_on_file_modified():230] file/dir modified: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/output.log
+2024-11-16 08:13:14,540 INFO    Thread-8  :19771 [dir_watcher.py:_on_file_modified():230] file/dir modified: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/output.log
+2024-11-16 08:13:20,541 INFO    Thread-8  :19771 [dir_watcher.py:_on_file_modified():230] file/dir modified: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/output.log
+2024-11-16 08:13:21,515 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: stop_status
+2024-11-16 08:13:21,515 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: stop_status
+2024-11-16 08:13:34,610 DEBUG   SenderThread:19771 [sender.py:send():235] send: stats
+2024-11-16 08:13:36,731 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: stop_status
+2024-11-16 08:13:36,732 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: stop_status
+2024-11-16 08:13:51,996 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: stop_status
+2024-11-16 08:13:51,996 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: stop_status
+2024-11-16 08:14:04,913 DEBUG   SenderThread:19771 [sender.py:send():235] send: stats
+2024-11-16 08:14:07,282 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: stop_status
+2024-11-16 08:14:07,282 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: stop_status
+2024-11-16 08:14:22,527 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: stop_status
+2024-11-16 08:14:22,527 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: stop_status
+2024-11-16 08:14:35,218 DEBUG   SenderThread:19771 [sender.py:send():235] send: stats
+2024-11-16 08:14:37,783 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: stop_status
+2024-11-16 08:14:37,783 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: stop_status
+2024-11-16 08:14:53,104 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: stop_status
+2024-11-16 08:14:53,104 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: stop_status
+2024-11-16 08:15:05,521 DEBUG   SenderThread:19771 [sender.py:send():235] send: stats
+2024-11-16 08:15:08,425 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: stop_status
+2024-11-16 08:15:08,425 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: stop_status
+2024-11-16 08:15:23,718 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: stop_status
+2024-11-16 08:15:23,718 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: stop_status
+2024-11-16 08:15:35,812 DEBUG   SenderThread:19771 [sender.py:send():235] send: stats
+2024-11-16 08:15:39,013 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: stop_status
+2024-11-16 08:15:39,014 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: stop_status
+2024-11-16 08:15:41,186 WARNING MainThread:19771 [internal.py:wandb_internal():152] Internal process interrupt: 1
+2024-11-16 08:15:42,570 INFO    Thread-8  :19771 [dir_watcher.py:_on_file_modified():230] file/dir modified: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/output.log
+2024-11-16 08:15:43,947 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:43,947 DEBUG   SenderThread:19771 [sender.py:send():235] send: telemetry
+2024-11-16 08:15:43,947 DEBUG   SenderThread:19771 [sender.py:send():235] send: exit
+2024-11-16 08:15:43,947 INFO    SenderThread:19771 [sender.py:send_exit():371] handling exit code: 255
+2024-11-16 08:15:43,947 INFO    SenderThread:19771 [sender.py:send_exit():373] handling runtime: 163
+2024-11-16 08:15:43,948 INFO    SenderThread:19771 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2024-11-16 08:15:43,948 INFO    SenderThread:19771 [sender.py:send_exit():379] send defer
+2024-11-16 08:15:43,948 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:43,948 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: defer
+2024-11-16 08:15:43,948 INFO    HandlerThread:19771 [handler.py:handle_request_defer():154] handle defer: 0
+2024-11-16 08:15:43,948 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: defer
+2024-11-16 08:15:43,948 INFO    SenderThread:19771 [sender.py:send_request_defer():388] handle sender defer: 0
+2024-11-16 08:15:43,948 INFO    SenderThread:19771 [sender.py:transition_state():392] send defer: 1
+2024-11-16 08:15:43,949 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: defer
+2024-11-16 08:15:43,949 INFO    HandlerThread:19771 [handler.py:handle_request_defer():154] handle defer: 1
+2024-11-16 08:15:44,007 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: defer
+2024-11-16 08:15:44,007 INFO    SenderThread:19771 [sender.py:send_request_defer():388] handle sender defer: 1
+2024-11-16 08:15:44,007 INFO    SenderThread:19771 [sender.py:transition_state():392] send defer: 2
+2024-11-16 08:15:44,007 DEBUG   SenderThread:19771 [sender.py:send():235] send: stats
+2024-11-16 08:15:44,008 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: defer
+2024-11-16 08:15:44,008 INFO    HandlerThread:19771 [handler.py:handle_request_defer():154] handle defer: 2
+2024-11-16 08:15:44,008 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: defer
+2024-11-16 08:15:44,008 INFO    SenderThread:19771 [sender.py:send_request_defer():388] handle sender defer: 2
+2024-11-16 08:15:44,008 INFO    SenderThread:19771 [sender.py:transition_state():392] send defer: 3
+2024-11-16 08:15:44,008 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: defer
+2024-11-16 08:15:44,008 INFO    HandlerThread:19771 [handler.py:handle_request_defer():154] handle defer: 3
+2024-11-16 08:15:44,008 DEBUG   SenderThread:19771 [sender.py:send():235] send: summary
+2024-11-16 08:15:44,009 INFO    SenderThread:19771 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2024-11-16 08:15:44,009 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: defer
+2024-11-16 08:15:44,009 INFO    SenderThread:19771 [sender.py:send_request_defer():388] handle sender defer: 3
+2024-11-16 08:15:44,009 INFO    SenderThread:19771 [sender.py:transition_state():392] send defer: 4
+2024-11-16 08:15:44,009 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: defer
+2024-11-16 08:15:44,009 INFO    HandlerThread:19771 [handler.py:handle_request_defer():154] handle defer: 4
+2024-11-16 08:15:44,009 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: defer
+2024-11-16 08:15:44,009 INFO    SenderThread:19771 [sender.py:send_request_defer():388] handle sender defer: 4
+2024-11-16 08:15:44,050 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:44,277 INFO    SenderThread:19771 [sender.py:transition_state():392] send defer: 5
+2024-11-16 08:15:44,277 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:44,277 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: defer
+2024-11-16 08:15:44,277 INFO    HandlerThread:19771 [handler.py:handle_request_defer():154] handle defer: 5
+2024-11-16 08:15:44,278 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: defer
+2024-11-16 08:15:44,278 INFO    SenderThread:19771 [sender.py:send_request_defer():388] handle sender defer: 5
+2024-11-16 08:15:44,278 INFO    SenderThread:19771 [dir_watcher.py:finish():283] shutting down directory watcher
+2024-11-16 08:15:44,379 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:44,570 INFO    SenderThread:19771 [dir_watcher.py:_on_file_modified():230] file/dir modified: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/config.yaml
+2024-11-16 08:15:44,571 INFO    SenderThread:19771 [dir_watcher.py:_on_file_modified():230] file/dir modified: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/wandb-summary.json
+2024-11-16 08:15:44,571 INFO    SenderThread:19771 [dir_watcher.py:_on_file_modified():230] file/dir modified: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/output.log
+2024-11-16 08:15:44,571 INFO    SenderThread:19771 [dir_watcher.py:finish():313] scan: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files
+2024-11-16 08:15:44,571 INFO    SenderThread:19771 [dir_watcher.py:finish():327] scan save: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/output.log output.log
+2024-11-16 08:15:44,571 INFO    SenderThread:19771 [dir_watcher.py:finish():327] scan save: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/wandb-metadata.json wandb-metadata.json
+2024-11-16 08:15:44,571 INFO    SenderThread:19771 [dir_watcher.py:finish():327] scan save: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/config.yaml config.yaml
+2024-11-16 08:15:44,573 INFO    SenderThread:19771 [dir_watcher.py:finish():327] scan save: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/wandb-summary.json wandb-summary.json
+2024-11-16 08:15:44,576 INFO    SenderThread:19771 [dir_watcher.py:finish():327] scan save: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/requirements.txt requirements.txt
+2024-11-16 08:15:44,576 INFO    SenderThread:19771 [sender.py:transition_state():392] send defer: 6
+2024-11-16 08:15:44,576 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:44,582 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: defer
+2024-11-16 08:15:44,582 INFO    HandlerThread:19771 [handler.py:handle_request_defer():154] handle defer: 6
+2024-11-16 08:15:44,582 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: defer
+2024-11-16 08:15:44,582 INFO    SenderThread:19771 [sender.py:send_request_defer():388] handle sender defer: 6
+2024-11-16 08:15:44,582 INFO    SenderThread:19771 [file_pusher.py:finish():177] shutting down file pusher
+2024-11-16 08:15:44,683 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:44,683 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:44,784 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:44,785 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:44,886 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:44,886 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:44,988 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:44,988 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:45,090 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:45,090 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:45,192 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:45,192 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:45,198 INFO    Thread-13 :19771 [upload_job.py:push():137] Uploaded file /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/config.yaml
+2024-11-16 08:15:45,223 INFO    Thread-15 :19771 [upload_job.py:push():137] Uploaded file /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/requirements.txt
+2024-11-16 08:15:45,247 INFO    Thread-14 :19771 [upload_job.py:push():137] Uploaded file /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/wandb-summary.json
+2024-11-16 08:15:45,293 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:45,294 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:45,319 INFO    Thread-12 :19771 [upload_job.py:push():137] Uploaded file /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/files/output.log
+2024-11-16 08:15:45,395 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:45,395 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:45,497 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:45,497 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:45,520 INFO    Thread-7  :19771 [sender.py:transition_state():392] send defer: 7
+2024-11-16 08:15:45,520 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: defer
+2024-11-16 08:15:45,520 INFO    HandlerThread:19771 [handler.py:handle_request_defer():154] handle defer: 7
+2024-11-16 08:15:45,520 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: defer
+2024-11-16 08:15:45,520 INFO    SenderThread:19771 [sender.py:send_request_defer():388] handle sender defer: 7
+2024-11-16 08:15:45,599 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:46,223 INFO    SenderThread:19771 [sender.py:transition_state():392] send defer: 8
+2024-11-16 08:15:46,224 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:46,224 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: defer
+2024-11-16 08:15:46,224 INFO    HandlerThread:19771 [handler.py:handle_request_defer():154] handle defer: 8
+2024-11-16 08:15:46,224 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: defer
+2024-11-16 08:15:46,224 INFO    SenderThread:19771 [sender.py:send_request_defer():388] handle sender defer: 8
+2024-11-16 08:15:46,224 INFO    SenderThread:19771 [sender.py:transition_state():392] send defer: 9
+2024-11-16 08:15:46,225 DEBUG   SenderThread:19771 [sender.py:send():235] send: final
+2024-11-16 08:15:46,225 DEBUG   SenderThread:19771 [sender.py:send():235] send: footer
+2024-11-16 08:15:46,225 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: defer
+2024-11-16 08:15:46,225 INFO    HandlerThread:19771 [handler.py:handle_request_defer():154] handle defer: 9
+2024-11-16 08:15:46,225 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: defer
+2024-11-16 08:15:46,225 INFO    SenderThread:19771 [sender.py:send_request_defer():388] handle sender defer: 9
+2024-11-16 08:15:46,326 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: poll_exit
+2024-11-16 08:15:46,326 DEBUG   SenderThread:19771 [sender.py:send_request():249] send_request: poll_exit
+2024-11-16 08:15:46,326 INFO    SenderThread:19771 [file_pusher.py:join():182] waiting for file pusher
+2024-11-16 08:15:46,736 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: get_summary
+2024-11-16 08:15:46,736 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: sampled_history
+2024-11-16 08:15:46,737 DEBUG   HandlerThread:19771 [handler.py:handle_request():131] handle_request: shutdown
+2024-11-16 08:15:46,737 INFO    HandlerThread:19771 [handler.py:finish():739] shutting down handler
+2024-11-16 08:15:47,225 INFO    WriterThread:19771 [datastore.py:close():281] close: /data/b11015059/Power/wandb/run-20241116_081258-ix77496u/run-ix77496u.wandb
+2024-11-16 08:15:47,734 INFO    SenderThread:19771 [sender.py:finish():1075] shutting down sender
+2024-11-16 08:15:47,735 INFO    SenderThread:19771 [file_pusher.py:finish():177] shutting down file pusher
+2024-11-16 08:15:47,735 INFO    SenderThread:19771 [file_pusher.py:join():182] waiting for file pusher
+2024-11-16 08:15:47,736 INFO    MainThread:19771 [internal.py:handle_exit():79] Internal process exited
