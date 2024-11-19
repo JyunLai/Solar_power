@@ -12,7 +12,7 @@ import wandb
 model_path = 'Transformer.ckpt'
 predict_csv_path = 'result.csv'
 # 設定特徵欄位和目標欄位
-feature_columns = ['LocationCode', 'WindSpeed(m/s)', 'Pressure(hpa)', 'Temperature(°C)', 'Humidity(%)', 'Sunlight(Lux)']
+feature_columns = ['LocationCode', 'WindSpeed(m/s)', 'Pressure(hpa)', 'Temperature(°C)', 'Humidity(%)', 'Sunlight(Lux)', 'Date_Time']
 target_column = 'Power(mW)'
 
 # 將資料轉換成序列資料
@@ -22,21 +22,10 @@ target_sequences = []
 power_correct = []
 
 # start a new wandb run to track this script
-wandb.init(
-    # set the wandb project where this run will be logged
-    project="my-awesome-project",
-
-    # track hyperparameters and run metadata
-    config={
-    "learning_rate": 0.02,
-    "architecture": "CNN",
-    "dataset": "CIFAR-100",
-    "epochs": 10,
-    }
-)
+wandb.init(project="solar-power-prediction-transformer", name="transformer-training")
 
 # 讀取每個觀測站的資料
-file_paths = glob.glob('36_TrainingData/L*_Train.csv')  # 替換成資料夾的路徑
+file_paths = glob.glob('/home/mvc/solar_energy/36_TrainingData/L*_Train_*.csv')  # 替換成資料夾的路徑
 for file_path in file_paths:
     print(file_path)
     # 讀取每個 CSV 檔案
@@ -44,6 +33,7 @@ for file_path in file_paths:
     
     # 按照時間戳排序並解析日期和時間
     data['DateTime'] = pd.to_datetime(data['DateTime'])
+    data['Date_Time'] = 100000000 * data['DateTime'].dt.year + 1000000 * data['DateTime'].dt.month + 10000 * data['DateTime'].dt.day + 100 * data['DateTime'].dt.hour + data['DateTime'].dt.minute
     data = data.sort_values('DateTime').reset_index(drop=True)
     
     # 正規化特徵欄位
@@ -161,7 +151,7 @@ class TransformerModel(nn.Module):
         return output
 
 # 模型參數設定
-feature_dim = 6  # 特徵數（風速、氣壓、溫度等）
+feature_dim = 7  # 特徵數（風速、氣壓、溫度等）
 d_model = 64  # 嵌入維度
 nhead = 4  # 多頭注意力頭數
 num_layers = 3  # Transformer Encoder 層數
@@ -175,8 +165,8 @@ model = TransformerModel(feature_dim, d_model, nhead, num_layers, dim_feedforwar
 
 # 定義損失函數和優化器
 criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=1e-4)
-
+optimizer = optim.Adam(model.parameters(), lr=1e-3)
+scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=50, gamma=0.1)
 # 訓練模型
 epochs = 500  # 訓練輪數
 best_loss = 999999
@@ -186,13 +176,15 @@ for epoch in range(epochs):
     epoch_loss = 0
     for batch in train_loader:
         inputs, targets = batch
+        inputs = inputs.to(device)
+        targets = targets.to(device)
         optimizer.zero_grad()
         
         # 模型預測
-        predictions = model(inputs.to(device)).squeeze(1)
+        predictions = model(inputs).squeeze(1)
         
         # 計算損失
-        loss = criterion(predictions, targets.to(device))
+        loss = criterion(predictions, targets)
         
         # 反向傳播和參數更新
         loss.backward()
@@ -200,7 +192,9 @@ for epoch in range(epochs):
         
         # 累加損失
         epoch_loss += loss.item()
-    print(f"Epoch {epoch+1}/{epochs}, Loss: {epoch_loss / len(train_loader):.4f}")
+    epoch_loss /= len(train_loader)
+    print(f"Epoch {epoch+1}/{epochs}, Loss: {epoch_loss:.4f}")
+    scheduler.step()
     # log metrics to wandb
     wandb.log({"train_loss": epoch_loss})
 
@@ -210,15 +204,18 @@ for epoch in range(epochs):
         valid_loss = 0
         for batch in val_loader:
             inputs, targets = batch
-            predictions = model(inputs.to(device)).squeeze(1)
-            loss = criterion(predictions, targets.to(device))
+            inputs = inputs.to(device)
+            targets = targets.to(device)
+            predictions = model(inputs).squeeze(1)
+            loss = criterion(predictions, targets)
             valid_loss += loss.item()
-        print(f"Validation Loss: {valid_loss / len(val_loader):.4f}")
+        valid_loss /= len(val_loader)
+        print(f"Validation Loss: {valid_loss:.4f}")
         # log metrics to wandb
         wandb.log({"val_loss": valid_loss})
         
     if valid_loss < best_loss:
-        early_stop = 5
+        # early_stop = 5
         best_loss = valid_loss
         # 儲存模型
         torch.save(model.state_dict(), model_path)
@@ -237,12 +234,17 @@ test_correct = torch.empty((0))
 with torch.no_grad():
     test_loss = 0
     for inputs, targets in test_loader:
+        inputs = inputs.to(device)
+        targets = targets.to(device)
         predictions = model(inputs).squeeze(1)
         loss = criterion(predictions, targets)
         test_loss += loss.item()
-        test_pred = torch.cat((test_pred, predictions.cpu()), 0)
-        test_correct = torch.cat((test_correct, targets.cpu()), 0)
-    print(f"Validation Loss: {test_loss / len(val_loader):.4f}")
+        test_pred = torch.cat((test_pred, predictions), 0)
+        test_correct = torch.cat((test_correct, targets), 0)
+        # test_pred = torch.cat((test_pred, predictions.cpu()), 0)
+        # test_correct = torch.cat((test_correct, targets.cpu()), 0)
+    test_loss /= len(val_loader)
+    print(f"Test Loss: {test_loss:.4f}")
 
 with open(predict_csv_path, "w") as f:
 
